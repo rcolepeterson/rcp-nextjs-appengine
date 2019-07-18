@@ -1,6 +1,6 @@
 # Next.js for APP Engine
 
-This repo is an example of Next.js configured to deploy to an App Engine env.
+Next.js project configured to be deployed to an Google Cloud App Engine env.
 Based on https://github.com/superbmeteor/nextjs-gae-demo
 
 ## Prerequisites
@@ -82,7 +82,7 @@ At one point I could not get this to build and run via App Engine when running t
 
 If App Engine finds a yarn.lock in the application directory, Yarn will be used to perform the npm installation.
 
-For reasons unknown to me, this did not work. I have tested again and have been succesful using yarn. So who knows.
+For reasons unknown to me, this did not work. I have tested again and have been successful using yarn. So who knows.
 
 It night have to do with the nodejs10 runtime I am targeting in the app.yaml?
 
