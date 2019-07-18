@@ -37,23 +37,6 @@ npm install
 npm run dev
 ```
 
-### Listen to port 8080
-
-The App Engine will route incoming requests to the appropriate module on port 8080. **You must be sure that your application code is listening on 8080.**
-
-`"start": "next start -p 8080"`
-
-or set it to the PORT env var
-
-`"start": "next start -p $PORT"`
-
-### Build and Deploy
-
-```javascript
-npm run build
-npm deploy
-```
-
 ### Debugging locally
 
 I am able to debug server side code using the following in my vscode launch.json file
@@ -72,7 +55,26 @@ I am able to debug server side code using the following in my vscode launch.json
 }
 ```
 
+### Build and Deploy
+
+```javascript
+npm run build
+npm deploy
+```
+
+You will be returned a URL for your App.
+
 ## Troubleshooting
+
+**Listen to port 8080**
+
+The App Engine will route incoming requests to the appropriate module on port 8080. **You must be sure that your application code is listening on 8080.**
+
+`"start": "next start -p 8080"`
+
+or set it to the PORT env var
+
+`"start": "next start -p $PORT"`
 
 **Yarn**
 
@@ -83,10 +85,6 @@ If App Engine finds a yarn.lock in the application directory, Yarn will be used 
 For reasons unknown to me, this did not work. I have tested again and have been succesful using yarn. So who knows.
 
 It night have to do with the nodejs10 runtime I am targeting in the app.yaml?
-
-**Port issues**
-
-See above notes on defining the port.
 
 **app.yaml**
 
